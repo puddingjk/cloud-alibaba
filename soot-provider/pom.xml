@@ -14,6 +14,13 @@
     <modules>
         <module>soot-base</module>
         <module>soot-data</module>
+        <module>soot-user</module>
     </modules>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.wanwei</groupId>
+            <artifactId>soot-common-base</artifactId>
+        </dependency>
+    </dependencies>
 </project>

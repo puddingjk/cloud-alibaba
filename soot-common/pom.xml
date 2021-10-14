@@ -10,6 +10,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>soot-common</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>soot-common-base</module>
+        <module>soot-common-log</module>
+        <module>soot-common-redis</module>
+        <module>soot-common-es</module>
+        <module>soot-common-freemark</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
