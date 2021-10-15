@@ -50,7 +50,7 @@
             <artifactId>soot-user-api</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-
+        <!-- 自动生成工具-->
         <dependency>
             <groupId>com.wanwei</groupId>
             <artifactId>code-gen</artifactId>
