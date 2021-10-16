@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wanwei.provider.base.mapper.UserDeviceMapper">
+
+    <insert id="insertBatch">
+        INSERT INTO tb_user_device(id,user_id, device_id)
+        SELECT * from (
+        <foreach collection="deviceObjList" item="device" separator=" UNION ALL ">
+            SELECT #{device.workId} as id ,#{userId} AS uId, #{device.id}as dId FROM DUAL
+        </foreach>
+        ) a
+        WHERE NOT EXISTS ( SELECT ud.user_id,ud.device_id FROM tb_user_device ud WHERE ud.user_id = a.uId and ud.device_id = a.dId )
+    </insert>
+</mapper>
