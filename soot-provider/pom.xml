@@ -12,9 +12,13 @@
     <artifactId>soot-provider</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>soot-base</module>
-        <module>soot-data</module>
-        <module>soot-user</module>
+        <module>soot-system</module>
+        <module>soot-bill</module>
+        <module>soot-tax</module>
+        <module>soot-agg</module>
+        <module>soot-chat</module>
+        <module>soot-message</module>
+        <module>soot-server</module>
     </modules>
 
     <dependencies>
@@ -22,5 +26,16 @@
             <groupId>com.wanwei</groupId>
             <artifactId>soot-common-base</artifactId>
         </dependency>
+
+        <!--链路追踪 所有服务都需要-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-sleuth</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
+        </dependency>
+
     </dependencies>
 </project>

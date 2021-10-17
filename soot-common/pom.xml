@@ -16,7 +16,7 @@
         <module>soot-common-log</module>
         <module>soot-common-redis</module>
         <module>soot-common-es</module>
-        <module>soot-common-freemark</module>
+        <module>soot-common-freemarker</module>
     </modules>
 
     <properties>
