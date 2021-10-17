@@ -1,4 +1,4 @@
-package com.wanwei.es.api.system;
+package com.wanwei.common.es;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
