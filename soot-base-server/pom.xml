@@ -8,7 +8,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
+    <description>通用的基础服务</description>
     <artifactId>soot-base-server</artifactId>
     <packaging>pom</packaging>
     <modules>
