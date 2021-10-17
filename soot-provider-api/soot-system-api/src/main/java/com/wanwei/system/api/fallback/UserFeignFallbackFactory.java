@@ -1,6 +1,6 @@
-package com.wanwei.system.api.system.base.api.fallback;
+package com.wanwei.system.api.fallback;
 
-import com.wanwei.system.api.system.base.api.feign.UserFeign;
+import com.wanwei.system.api.feign.UserFeign;
 import feign.hystrix.FallbackFactory;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

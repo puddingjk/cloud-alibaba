@@ -1,6 +1,6 @@
 package com.wanwei.system.api.feign;
 
-import com.wanwei.system.api.system.base.api.fallback.UserFeignFallbackFactory;
+import com.wanwei.system.api.fallback.UserFeignFallbackFactory;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
