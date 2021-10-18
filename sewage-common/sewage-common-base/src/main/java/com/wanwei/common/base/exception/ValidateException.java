@@ -1,10 +1,10 @@
 package com.wanwei.common.base.exception;
 
 
-import com.wanwei.common.base.system.api.system.cbase.common.constants.Constants;
+import com.wanwei.common.base.constants.Constants;
 
 /**
- * @ClassName : UserRoleService
+ * @ClassName : ValidateException
  * @Description : 验证异常父类 默认返回消息：参数不合法 默认状态码：301
  * @Author : admin
  * @Date : 2021-08-11
