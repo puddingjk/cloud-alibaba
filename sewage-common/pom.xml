@@ -8,7 +8,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <description>通用工具类等</description>
+    <description>通用模块父类</description>
     <artifactId>sewage-common</artifactId>
     <packaging>pom</packaging>
     <modules>
