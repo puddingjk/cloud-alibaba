@@ -1,4 +1,4 @@
-package com.wanwei.common.base.system.api.system.cbase.common.entity;
+package com.wanwei.common.base.entity;
 
 import lombok.Data;
 

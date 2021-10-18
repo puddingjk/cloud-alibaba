@@ -1,4 +1,4 @@
-package com.wanwei.tax.controller;
+package com.wanwei.agg.provider.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;

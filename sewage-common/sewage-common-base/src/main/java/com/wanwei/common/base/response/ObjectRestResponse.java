@@ -1,7 +1,7 @@
 package com.wanwei.common.base.response;
 
 
-import com.wanwei.common.base.system.api.system.cbase.common.constants.Constants;
+import com.wanwei.common.base.constants.Constants;
 
 /**
  * @ClassName : ObjectRestResponse

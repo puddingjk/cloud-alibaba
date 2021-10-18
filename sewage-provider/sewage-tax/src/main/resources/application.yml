@@ -1,0 +1,84 @@
+server:
+  tomcat:
+    uri-encoding: UTF-8
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    max-idle: 10
+    max-wait: 10000
+    min-idle: 5
+    initial-size: 5
+    validation-query: SELECT 1
+    test-on-borrow: false
+    test-while-idle: true
+    time-between-eviction-runs-millis: 18800
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      connection-timeout: 30000       # 等待连接池分配连接的最大时长（毫秒），超过这个时长还没可用的连接则发生SQLException， 默认:30秒
+      minimum-idle: 5                 # 最小连接数
+      maximum-pool-size: 20           # 最大连接数
+      auto-commit: true               # 自动提交
+      idle-timeout: 600000            # 连接超时的最大时长（毫秒），超时则被释放（retired），默认:10分钟
+      pool-name: DateSourceHikariCP     # 连接池名字
+      max-lifetime: 1800000           # 连接的生命时长（毫秒），超时而且没被使用则被释放（retired），默认:30分钟 1800000ms
+      connection-test-query: SELECT 1
+  jackson:
+      time-zone: GMT+8
+  redis:
+    # 连接池最大连接数（使用负值表示没有限制）
+    pool.max-active: 200
+    # 连接池最大阻塞等待时间（使用负值表示没有限制）
+    pool.max-wait: -1
+    # 连接池中的最大空闲连接
+    pool.max-idle: 10
+    # 连接池中的最小空闲连接
+    pool.min-idle: 0
+    # 连接超时时间（毫秒）
+    timeout: 1000
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    auto-mapping-behavior: full
+#    打印SQL语句 开发时候开启
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    call-setters-on-nulls: true
+  mapper-locations: classpath*:mapper/*Mapper.xml
+  type-aliases-package: com.wanwei.provider.**.entity
+  global-config:
+    db-column-underline: true
+    # 逻辑删除配置
+    db-config:
+      # 删除前
+      logic-not-delete-value: 0
+      # 删除后
+      logic-delete-value: 1
+      cache-enabled: false
+#logging:
+#  level:
+#    root: info
+#  file:
+#    path: ./logs
+#    name: iot-cloud.log
+
+
+# 分页配置
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+
+# feign 配置
+feign:
+  client:
+    config:
+      default:
+        read-timeout: 20000
+        connect-timeout: 20000
+  hystrix:
+    enabled: true
+
+user:
+  init:
+    password: 888888

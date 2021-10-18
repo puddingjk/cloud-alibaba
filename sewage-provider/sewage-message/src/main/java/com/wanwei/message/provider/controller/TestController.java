@@ -1,6 +1,5 @@
-package com.wanwei.system.controller;
+package com.wanwei.message.provider.controller;
 
-import io.seata.spring.annotation.GlobalTransactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
@@ -25,7 +24,6 @@ public class TestController {
         return result+" 配置" +configName;
     }
     @GetMapping("/t1")
-    @GlobalTransactional(name = "test-事物",rollbackFor = Exception.class)
     public String test1(){
         return version;
     }

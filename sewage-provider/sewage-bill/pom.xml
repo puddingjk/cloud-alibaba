@@ -32,5 +32,10 @@
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-seata</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.wanwei</groupId>
+            <artifactId>code-gen</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 </project>

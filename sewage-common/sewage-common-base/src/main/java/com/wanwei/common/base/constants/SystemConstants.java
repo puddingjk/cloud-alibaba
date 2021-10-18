@@ -1,4 +1,4 @@
-package com.wanwei.common.base.system.api.system.cbase.common.constants;
+package com.wanwei.common.base.constants;
 
 /**
  * @ClassName : SystemConstants
