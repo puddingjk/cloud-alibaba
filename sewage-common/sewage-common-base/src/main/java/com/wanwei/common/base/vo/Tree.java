@@ -106,8 +106,8 @@ public class Tree {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o){ return true;}
+        if (o == null || getClass() != o.getClass()) {return false;}
         Tree tree = (Tree) o;
         return Objects.equals(id, tree.id) &&
                 Objects.equals(label, tree.label) &&
