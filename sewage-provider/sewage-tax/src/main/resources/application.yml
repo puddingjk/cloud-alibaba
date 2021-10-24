@@ -54,14 +54,12 @@ mybatis-plus:
       # 删除后
       logic-delete-value: 1
       cache-enabled: false
-#logging:
-#  level:
-#    root: info
-#  file:
-#    path: ./logs
-#    name: iot-cloud.log
-
-
+logging:
+  level:
+    root: info
+  file:
+    path: ./logs
+    name: ${spring.application.name}.log
 # 分页配置
 pagehelper:
   helper-dialect: mysql
@@ -78,7 +76,3 @@ feign:
         connect-timeout: 20000
   hystrix:
     enabled: true
-
-user:
-  init:
-    password: 888888

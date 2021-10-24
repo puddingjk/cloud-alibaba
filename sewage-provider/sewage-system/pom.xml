@@ -24,10 +24,13 @@
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-seata</artifactId>
+            <groupId>com.wanwei</groupId>
+            <artifactId>sewage-common-log</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>com.wanwei</groupId>
+            <artifactId>sewage-common-redis</artifactId>
+        </dependency>
         <!--mysql-->
         <dependency>
             <groupId>mysql</groupId>

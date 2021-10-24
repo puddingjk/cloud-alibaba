@@ -1,4 +1,4 @@
-package com.wanwei.es.api.system.starter.config;
+package com.wanwei.common.es.starter.config;
 
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Configuration;

@@ -151,6 +151,24 @@
                 <version>${common.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.wanwei</groupId>
+                <artifactId>sewage-common-log</artifactId>
+                <version>${common.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.wanwei</groupId>
+                <artifactId>sewage-common-redis</artifactId>
+                <version>${common.version}</version>
+            </dependency>
+            <!-- es-->
+            <dependency>
+                <groupId>com.wanwei</groupId>
+                <artifactId>sewage-common-es</artifactId>
+                <version>${common.version}</version>
+            </dependency>
+
             <!-- mybatis分页插件 -->
             <dependency>
                 <groupId>com.github.pagehelper</groupId>
@@ -205,20 +223,22 @@
         </dependency>
     </dependencies>
     <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <excludes>
-                        <exclude>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                        </exclude>
-                    </excludes>
-                </configuration>
-            </plugin>
-        </plugins>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <configuration>
+                        <excludes>
+                            <exclude>
+                                <groupId>org.projectlombok</groupId>
+                                <artifactId>lombok</artifactId>
+                            </exclude>
+                        </excludes>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
     </build>
 
 </project>

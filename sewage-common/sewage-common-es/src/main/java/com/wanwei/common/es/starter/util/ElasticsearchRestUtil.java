@@ -1,4 +1,4 @@
-package com.wanwei.es.api.system.starter.util;
+package com.wanwei.common.es.starter.util;
 
 import lombok.extern.slf4j.Slf4j;
 import org.elasticsearch.action.admin.indices.alias.get.GetAliasesRequest;
@@ -21,7 +21,7 @@ import java.util.Set;
 
 /**
  * @ClassName : ElasticsearchRestUtil
- * @Description :
+ * @Description : Es查询工具类
  * @Author : LuoHongyu
  * @Date : 2021-10-14 17:15
  */
@@ -148,7 +148,7 @@ public class ElasticsearchRestUtil {
                 }
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            log.error("error:{}",e);
         }
     }
 

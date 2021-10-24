@@ -86,7 +86,3 @@ feign:
         connect-timeout: 20000
   hystrix:
     enabled: true
-
-user:
-  init:
-    password: 888888

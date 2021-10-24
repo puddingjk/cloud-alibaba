@@ -14,7 +14,6 @@ package com.wanwei.common.base.controller;
 //import com.wanwei.common.utils.StringUtil;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * @ClassName : BaseController
@@ -25,7 +24,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 @Slf4j
 public class BaseController<Biz extends Object, Entity> {
 
-    @Autowired
+//    @Autowired
     protected Biz baseService;
 
 //

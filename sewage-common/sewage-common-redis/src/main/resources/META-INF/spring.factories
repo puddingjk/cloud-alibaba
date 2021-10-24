@@ -1,2 +1,3 @@
-#-------starter自动装配---------
-#org.springframework.boot.autoconfigure.EnableAutoConfiguration=
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.wanwei.common.redis.starter.config.ModuleAutoConfig,\
+com.wanwei.common.redis.starter.config.TokenInterceptorAutoConfiguration

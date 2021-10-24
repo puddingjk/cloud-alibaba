@@ -27,6 +27,41 @@ spring:
           uri: lb://sewage-system
           order: 1
           predicates:
-            - Path=/system/**
+            - Path=/sys/**
+          filters:
+            - StripPrefix=1
+        - id: sewage-bill
+          uri: lb://sewage-bill
+          order: 1
+          predicates:
+            - Path=/bill/**
+          filters:
+            - StripPrefix=1
+        - id: sewage-tax
+          uri: lb://sewage-tax
+          order: 1
+          predicates:
+            - Path=/tax/**
+          filters:
+            - StripPrefix=1
+        - id: sewage-agg
+          uri: lb://sewage-agg
+          order: 1
+          predicates:
+            - Path=/agg/**
+          filters:
+            - StripPrefix=1
+        - id: sewage-message
+          uri: lb://sewage-message
+          order: 1
+          predicates:
+            - Path=/mes/**
+          filters:
+            - StripPrefix=1
+        - id: sewage-chat
+          uri: lb://sewage-chat
+          order: 1
+          predicates:
+            - Path=/chat/**
           filters:
             - StripPrefix=1
