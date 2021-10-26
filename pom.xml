@@ -168,7 +168,11 @@
                 <artifactId>sewage-common-es</artifactId>
                 <version>${common.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>com.wanwei</groupId>
+                <artifactId>sewage-common-security</artifactId>
+                <version>${common.version}</version>
+            </dependency>
             <!-- mybatis分页插件 -->
             <dependency>
                 <groupId>com.github.pagehelper</groupId>
@@ -212,7 +216,12 @@
                 <artifactId>redisson-spring-boot-starter</artifactId>
                 <version>3.13.6</version>
             </dependency>
-
+            <!--JWT-->
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>0.9.1</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
     <dependencies>
@@ -223,22 +232,16 @@
         </dependency>
     </dependencies>
     <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-maven-plugin</artifactId>
-                    <configuration>
-                        <excludes>
-                            <exclude>
-                                <groupId>org.projectlombok</groupId>
-                                <artifactId>lombok</artifactId>
-                            </exclude>
-                        </excludes>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
-
 </project>

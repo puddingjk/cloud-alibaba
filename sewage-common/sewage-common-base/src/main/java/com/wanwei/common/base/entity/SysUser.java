@@ -25,4 +25,7 @@ public class SysUser {
     private String productGroupName;
     private Boolean superAdmin;
     private Boolean groupAdmin;
+    private Integer delFlag;
+    private Integer status;
+    private String password;
 }

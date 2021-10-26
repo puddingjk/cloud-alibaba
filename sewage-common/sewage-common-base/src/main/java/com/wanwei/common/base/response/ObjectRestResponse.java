@@ -18,6 +18,15 @@ public class ObjectRestResponse<T> extends BaseResponse {
     }
 
     /**
+     * 返回成功
+     *
+     * @return
+     */
+    public static <E> ObjectRestResponse<E> ok() {
+        return new ObjectRestResponse<>(Constants.ErrorCode.SUCCESS, "操作成功", null, true);
+    }
+
+    /**
      * 返回成功：带数据
      *
      * @param o

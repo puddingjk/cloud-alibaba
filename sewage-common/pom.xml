@@ -17,6 +17,7 @@
         <module>sewage-common-redis</module>
         <module>sewage-common-es</module>
         <module>sewage-common-freemarker</module>
+        <module>sewage-common-security</module>
     </modules>
 
     <properties>
@@ -24,14 +25,16 @@
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
     <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <skip>true</skip>
-                </configuration>
-            </plugin>
-        </plugins>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <configuration>
+                        <skip>true</skip>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
     </build>
 </project>
